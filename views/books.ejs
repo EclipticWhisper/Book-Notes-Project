@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Book Note</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="page-shell">
+    <p class="eyebrow">Reading journal</p>
+
+    <h1>Add a Book to Your Collection</h1>
+
+    <!-- The action attribute specifies where to send the data on your server -->
+    <form class="form-panel" action="/books/new" method="POST">
+        
+        <!-- Book Title Input -->
+        <div class="form-grid">
+        <div class="form-field">
+            <label for="title">Book Title:</label>
+            <input type="text" id="title" name="title" required placeholder="e.g. Atomic Habits">
+        </div>
+
+        <!-- Author Input -->
+        <div class="form-field">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required placeholder="e.g. James Clear">
+        </div>
+
+        <!-- ISBN Input (Crucial for fetching covers from Open Library API) -->
+        <div class="form-field">
+            <label for="isbn">ISBN (10 or 13 digits):</label>
+            <input type="text" id="isbn" name="isbn" required placeholder="e.g. 9781847941831">
+        </div>
+
+        <!-- Rating Input (Enforces your 0-10 database rule) -->
+        <div class="form-field">
+            <label for="rating">Your Rating (0-10):</label>
+            <input type="number" id="rating" name="rating" min="0" max="10" required placeholder="10">
+        </div>
+
+        <!-- Date Read Input -->
+        <div class="form-field">
+            <label for="date_read">Date Finished:</label>
+            <input type="date" id="date_read" name="date_read" required>
+        </div>
+
+        <!-- Book Notes Textarea -->
+        <div class="form-field form-field--wide">
+            <label for="notes">Key Takeaways & Notes:</label>
+            <textarea id="notes" name="notes" rows="6" required placeholder="Write your book summaries or thoughts here..."></textarea>
+        </div>
+
+        <!-- Form Submission Button -->
+        <div class="form-actions form-field--wide">
+            <button type="submit">Save Book Notes</button>
+        </div>
+        </div>
+
+    </form>
+
+    <p><a class="back-link" href="/">Cancel and go back</a></p>
+
+</main>
+</body>
+</html>

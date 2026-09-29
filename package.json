@@ -19,7 +19,11 @@
   "homepage": "https://github.com/EclipticWhisper/Book-Notes-Project#readme",
   "description": "",
   "dependencies": {
-    "express": "^5.2.1"
+    "dotenv": "^18.0.4",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "morgan": "^1.12.1",
+    "pg": "^8.23.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
