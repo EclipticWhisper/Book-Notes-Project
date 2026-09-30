@@ -12,7 +12,7 @@
     <h1>Add a Book to Your Collection</h1>
 
     <!-- The action attribute specifies where to send the data on your server -->
-    <form class="form-panel" action="/books/new" method="POST">
+    <form class="form-panel" action="/add" method="POST">
         
         <!-- Book Title Input -->
         <div class="form-grid">
@@ -28,10 +28,10 @@
         </div>
 
         <!-- ISBN Input (Crucial for fetching covers from Open Library API) -->
-        <!-- <div class="form-field">
+        <div class="form-field">
             <label for="isbn">ISBN (10 or 13 digits):</label>
             <input type="text" id="isbn" name="isbn" required placeholder="e.g. 9781847941831">
-        </div> -->
+        </div>
 
         <!-- Rating Input (Enforces your 0-10 database rule) -->
         <div class="form-field">
